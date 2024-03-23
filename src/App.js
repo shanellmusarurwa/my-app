@@ -10,7 +10,7 @@ function App() {
           <footer>
             This project was coded by Mitchelle Musarurwa and is on{" "}
             <a
-              href="https://github.com/shanellmusarurwa/React-Weather-App"
+              href="https://github.com/shanellmusarurwa/my-app"
               target="_blank"
               rel="noreferrer"
             >
