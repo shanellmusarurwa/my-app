@@ -1,14 +1,16 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Popular from "./Popular";
-import { useGlobalContext } from "./context/global";
+import AnimeItem from "./AnimeItem";
 
 function App() {
-  const global = useGlobalContext();
-  console.log(global);
   return (
-    <div className="App">
-      <Popular />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Popular />} />
+        <Route path="/anime/:id" element={<AnimeItem />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
