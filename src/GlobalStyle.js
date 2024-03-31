@@ -10,6 +10,9 @@ const GlobalStyle = createGlobalStyle`
     text-decoration : none;
     font-family: 'Lato',sans-serif;
   }
+  body{
+    font-size:1.2rem;
+  }
 `;
 
 export default GlobalStyle;
