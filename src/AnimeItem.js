@@ -30,9 +30,28 @@ export default function AnimeItem(){
                     </div>
                     <div className="anime-details">
                         <p><span>Aired:</span><span>{aired?.string}</span></p>
+                        <p><span>Rating:</span><span>{rating}</span></p>
+                        <p><span>Rank:</span><span>{rank}</span></p>
+                        <p><span>Score:</span><span>{score}</span></p>
+                        <p><span>scored By:</span><span>{scored_by}</span></p>
+                        <p><span>Popularity:</span><span>{popularity}</span></p>
+                        <p><span>Status:</span><span>{status}</span></p>
+                        <p><span>Source:</span><span>{source}</span></p>
+                        <p><span>Season:</span><span>{season}</span></p>
+                        <p><span>Duration:</span><span>{duration}</span></p>
                          
                     </div>
                 </div>
+                <p className="description">
+                    {showMore ? synopsis : synopsis?substring :(0, 500) + '...' }
+                    <button onClick={()=>{
+                        setShowMore(!showMore)
+                    }}>{showMore ? 'Show Less': 'Read More'}</button>
+                </p>
+            </div>
+            <h3 className="title">Trailer</h3>
+            <div className="trailer-container">
+                {trailer?.embed_url && <iframe src={trailer?.embed_url} title={title} frame-border="0" allowFullScreen></iframe>}
             </div>
         </div>
     )
