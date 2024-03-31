@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Lato',sans-serif;
   }
   body{
+    color:#6c7983;
     font-size:1.2rem;
   }
 `;

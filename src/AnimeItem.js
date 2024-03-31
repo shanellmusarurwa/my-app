@@ -118,6 +118,23 @@ export default function AnimeItem() {
             allowFullScreen></iframe>
         )}
       </div>
+      <h3 className="title">Characters</h3>
+      <div className="characters">
+        {characters?.map((character, index) => {
+          const { role } = character;
+          const { images, name, mal_id } = character.character;
+          return (
+            <link to={`/character/${mal_id}`} key={index}>
+              div{" "}
+              <div className="character">
+                <img src={images?.jpg.image_url} alt="" />
+                <h4>{name}</h4>
+                <p>{role}</p>
+              </div>
+            </link>
+          );
+        })}
+      </div>
     </AnimeItemStyled>
   );
 }
@@ -148,6 +165,46 @@ const AnimeItemStyled = styled.div`
         font-size: 1.2rem;
         color: #27ae60;
         font-weight: 600;
+      }
+    }
+    .trailer-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      iframe {
+        outline: none;
+        border: 5px solid #e5e7eb;
+        padding: 1.5rem;
+        border-radius: 10px;
+        background-color: #ffffff;
+      }
+    }
+    .characters {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 2rem;
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      border: 5px solid #e5e7eb;
+      .character {
+        padding: 0.4rem 0.6rem;
+        border-radius: 7px;
+        background-color: #ededed;
+        transition: all 0.4s ease-in-out;
+        img {
+          width: 100%;
+        }
+        h4 {
+          padding: 0.5rem 0;
+          color: #454e56;
+        }
+        p {
+          color: #27ae60;
+        }
+        &:hover {
+          transform: translateY(-5px);
+        }
       }
     }
     .details {
