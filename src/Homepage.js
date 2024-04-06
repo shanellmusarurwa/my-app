@@ -12,8 +12,12 @@ export default function Homepage(){
     const switchComponent = () =>{
         switch(rendered){
             case 'popular':
-                return <Ppular rendered={rendered} />
-                default :
+                return <Popular rendered={rendered} />
+            case 'airing':
+                return <Airing rendered ={rendered} />
+            case 'upcoming':
+                return <Upcoming rendered = {rendered} />
+            default :
                 return <Popular rendered={rendered} />
         }
     }
@@ -34,10 +38,13 @@ export default function Homepage(){
                             setRendered('popular')
                         }}>Popular</button>
                     </div>
-                     <form action=""  className="search-form">
+                     <form action=""  className="search-form" onSubmit={handleSubmit}>
                         <div className="input">
                             <input type="text" placeholder="Search Anime" value={search} onChange={handleChange}/>
-                            <button type="submit" onClick={handleSubmit}>search</button>
+                            <button type="submit" >search</button>
+
+                        </div>
+                        <div className="search-results">
 
                         </div>
                      </form>
