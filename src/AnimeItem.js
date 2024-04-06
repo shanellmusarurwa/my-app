@@ -203,7 +203,7 @@ const AnimeItemStyled = styled.div`
           color: #27ae60;
         }
         &:hover {
-          transform: translateY(-5px);
+          transform: translateY(-5px); 
         }
       }
     }
