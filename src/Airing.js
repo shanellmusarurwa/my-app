@@ -7,7 +7,7 @@ export default function Airing({ rendered }) {
   const { airingAnimeAnime, isSearch, searchResults } = useGlobalContext();
   const conditionalRender = () => {
     if (!isSearch && rendered === "airing") {
-      return airingAnime.map((anime) => {
+      return airingAnime?.map((anime) => {
         return (
           <Link to={"/anime/${anime.mal_id}"} key={anime.mal_id}>
             <img src={anime.images.jpg.large_image_url} alt="" />
@@ -15,7 +15,7 @@ export default function Airing({ rendered }) {
         );
       });
     } else {
-      return searchResults.map((anime) => {
+      return searchResults?.map((anime) => {
         return (
           <Link to={"/anime/${anime.mal_id}"} key={anime.mal_id}>
             <img src={anime.images.jpg.large_image_url} alt="" />

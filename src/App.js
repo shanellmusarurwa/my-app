@@ -1,6 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Popular from "./Popular";
 import Gallery from "./Gallery";
 import AnimeItem from "./AnimeItem";
 import Homepage from "./Homepage";

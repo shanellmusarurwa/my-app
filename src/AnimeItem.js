@@ -34,7 +34,7 @@ export default function AnimeItem() {
 
   const getCharacters = async (anime) => {
     const response = await fetch(
-      `https://api.jikan.moe/v4/anime/${anime}/characters`
+      `https://api.jikan.moe/v4/anime/${id}/characters`
     );
     const data = await response.json();
     setCharacters(data.data);

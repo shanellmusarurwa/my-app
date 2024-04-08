@@ -6,7 +6,7 @@ export default function Popular({ rendered }) {
   const { popularAnime, isSearch, searchResults } = useGlobalContext();
   const conditionalRender = () => {
     if (!isSearch && rendered === "popular") {
-      return popularAnime.map((anime) => {
+      return popularAnime?.map((anime) => {
         return (
           <Link to={"/anime/${anime.mal_id}"} key={anime.mal_id}>
             <img src={anime.images.jpg.large_image_url} alt="" />
@@ -14,7 +14,7 @@ export default function Popular({ rendered }) {
         );
       });
     } else {
-      return searchResults.map((anime) => {
+      return searchResults?.map((anime) => {
         return (
           <Link to={"/anime/${anime.mal_id}"} key={anime.mal_id}>
             <img src={anime.images.jpg.large_image_url} alt="" />

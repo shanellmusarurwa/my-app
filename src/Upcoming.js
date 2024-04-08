@@ -7,7 +7,7 @@ export default function Upcoming({ rendered }) {
   const { upcomingAnime, isSearch, searchResults } = useGlobalContext();
   const conditionalRender = () => {
     if (!isSearch && rendered === "upcoming") {
-      return upcomingAnime.map((anime) => {
+      return upcomingAnime?.map((anime) => {
         return (
           <Link to={"/anime/${anime.mal_id}"} key={anime.mal_id}>
             <img src={anime.images.jpg.large_image_url} alt="" />
@@ -15,7 +15,7 @@ export default function Upcoming({ rendered }) {
         );
       });
     } else {
-      return searchResults.map((anime) => {
+      return searchResults?.map((anime) => {
         return (
           <Link to={"/anime/${anime.mal_id}"} key={anime.mal_id}>
             <img src={anime.images.jpg.large_image_url} alt="" />

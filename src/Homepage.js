@@ -27,7 +27,7 @@ export default function Homepage(){
             <header>
                 <div className="logo">
                     <h1>
-                        {rendered === 'popular ? 'Popular Anime' : 
+                        {rendered === 'popular ? 'Popular Anime' ,
                         rendered === 'airing' ? 'Airing Anime' :  'Upcoming Anime'}
                     </h1>
               
