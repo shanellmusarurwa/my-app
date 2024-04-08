@@ -1,5 +1,5 @@
 import React from "react";
-import { useGlobalContext } from "../context/global";
+import { useGlobalContext } from "./context/global";
 import Popular from "./Popular";
 import styled from "styled-components";
 import Upcoming from "./Upcoming";
